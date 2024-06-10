@@ -1,6 +1,6 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,14 +20,14 @@ const Nav = () => {
         <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
           {/* Hamburger icon */}
           <path
-            className={`${isOpen ? 'hidden' : 'block'}`}
+            className={`${isOpen ? "hidden" : "block"}`}
             fillRule="evenodd"
             clipRule="evenodd"
             d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
           />
           {/* Close icon */}
           <path
-            className={`${isOpen ? 'block' : 'hidden'}`}
+            className={`${isOpen ? "block" : "hidden"}`}
             fillRule="evenodd"
             clipRule="evenodd"
             d="M5.707 7.293l1.414-1.414L12 10.586l4.879-4.879 1.414 1.414L13.414 12l4.879 4.879-1.414 1.414L12 13.414l-4.879 4.879-1.414-1.414L10.586 12 5.707 7.121z"
@@ -37,7 +37,7 @@ const Nav = () => {
       {/* Navigation links */}
       <ul
         className={`${
-          isOpen ? 'block' : 'hidden'
+          isOpen ? "block" : "hidden"
         } md:flex font-serif font-semibold space-x-4 text-2xl`}
       >
         <li>
@@ -47,19 +47,21 @@ const Nav = () => {
           <Link href="/Exp">Experience</Link>
         </li>
         <li>
-          <Link href="/Exp">Skillset</Link>
+          <Link href="/Skillset">Skillset</Link>
         </li>
         <li>
-          <Link href="/Exp">Projects</Link>
+          <Link href="/Projects">Projects</Link>
         </li>
         <li>
-          <Link href="/Exp">Blog</Link>
+          <Link href="https://k-blogs.vercel.app/" target="_blank">
+            Blog
+          </Link>
         </li>
         <li>
           <Link href="/Exp">Resume</Link>
         </li>
         <li>
-          <Link href="/Exp">Contact</Link>
+          <Link href="/Contact">Contact</Link>
         </li>
       </ul>
     </nav>
