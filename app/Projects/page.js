@@ -4,15 +4,13 @@ import { FaGithub, FaEye } from "react-icons/fa";
 
 const fetchWorks = async () => {
   try {
-    const res = await fetch(
-      "https://ap-south-1.cdn.hygraph.com/content/clx8jrel605aj07uz53e2t5sj/master",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query: `
+    const res = await fetch(process.env.NEXT_PUBLIC_CDN, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
           query MyQuery {
             projectss {
               githubUrl
@@ -25,9 +23,8 @@ const fetchWorks = async () => {
               description
             }
         }  `,
-        }),
-      }
-    );
+      }),
+    });
 
     if (!res.ok) {
       const errorDetails = await res.text();
@@ -71,7 +68,7 @@ const Page = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-10">
       <div className="container mx-auto">
-        <h1 className="text-center text-4xl font-serif font-bold mt-10">
+        <h1 className="text-center text-4xl font-serif font-bold mt-20">
           My Work 💼
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">

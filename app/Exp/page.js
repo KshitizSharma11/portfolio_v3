@@ -1,18 +1,17 @@
 // app/Exp/page.js
 "use client";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const fetchWorks = async () => {
   try {
-    const res = await fetch(
-      "https://ap-south-1.cdn.hygraph.com/content/clx8jrel605aj07uz53e2t5sj/master",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query: `
+    const res = await fetch(process.env.NEXT_PUBLIC_CDN, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
           query MyQuery {
             works {
               image {
@@ -24,9 +23,8 @@ const fetchWorks = async () => {
             }
           }
         `,
-        }),
-      }
-    );
+      }),
+    });
 
     if (!res.ok) {
       const errorDetails = await res.text();
@@ -65,39 +63,45 @@ export default function Page() {
   }, []);
 
   if (error) {
-    return <div>Error loading works: {error}</div>;
+    return (
+      <div className="text-center text-red-500">
+        Error loading works: {error}
+      </div>
+    );
   }
 
   return (
-    <div>
-      <div>
-        <h1 className="text-center text-4xl font-serif font-bold mt-10">
+    <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-center text-4xl font-serif font-bold mt-20 mb-8">
           Experience
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {works.map((work, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-2 m-2 rounded-xl items-center flex-col flex justify-center bg-slate-200"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="p-4 rounded-xl shadow-lg bg-white"
             >
               <img
                 src={work.image.url}
                 width={200}
                 height={200}
                 alt={work.title}
+                className="mx-auto mb-4 rounded-full"
               />
-              <h1 className="text-2xl mt-2 font-serif">{work.title}</h1>
-              <h2 className="text-xl mt-2">{work.duration}</h2>
-              {/* Render description with line breaks */}
-              <p className="text-xl mt-2 m-1 p-2">
-                {work.description.split("\n").map((line, i) => (
-                  <React.Fragment key={i}>
-                    {line}
-                    <br /> {/* Add a line break after each line */}
-                  </React.Fragment>
-                ))}
+              <h1 className="text-2xl font-serif font-bold text-center mb-2">
+                {work.title}
+              </h1>
+              <h2 className="text-lg font-medium text-center mb-2">
+                {work.duration}
+              </h2>
+              <p className="text-base text-gray-700 text-center">
+                {work.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
