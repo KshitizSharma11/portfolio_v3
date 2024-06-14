@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaEye } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 const fetchWorks = async () => {
   try {
     const res = await fetch(process.env.NEXT_PUBLIC_CDN, {
@@ -66,9 +66,9 @@ const Page = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="bg-opacity-8 min-h-screen py-10">
       <div className="container mx-auto">
-        <h1 className="text-center text-4xl font-serif font-bold mt-20">
+        <h1 className="text-center text-4xl text-gray-100 font-serif font-bold mt-20">
           My Work 💼
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -99,12 +99,18 @@ const Page = () => {
                 </div>
               </div>
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{work.name}</h2>
+                <motion.h2
+                  animate={{ x: [0, 50] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                  className="text-xl font-bold mb-2"
+                >
+                  {work.name}
+                </motion.h2>
                 <div className="flex items-center mb-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    className="h-5 w-5 mr-1 text-gray-500"
+                    className="h-5 w-5 mr-1 animate-spin text-blue-500"
                   >
                     <path
                       fill="currentColor"

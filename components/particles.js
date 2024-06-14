@@ -47,15 +47,9 @@ const ParticlesComponent = () => {
       },
       particles: {
         color: {
-          value: "#0000",
+          value: ["#FFFF33", "#FF1493", "#800080", "#00FFFF", "#40E0D0"],
         },
-        links: {
-          color: "#0000",
-          distance: 150,
-          enable: true,
-          opacity: 0.7,
-          width: 1,
-        },
+
         move: {
           direction: "none",
           enable: true,
@@ -73,13 +67,13 @@ const ParticlesComponent = () => {
           value: 80,
         },
         opacity: {
-          value: 0.9,
+          value: 1,
         },
         shape: {
-          type: "circle",
+          type: ["star", "circle", "square"],
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 3, max: 7 },
         },
       },
       detectRetina: true,

@@ -10,17 +10,17 @@ const Nav = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full  bg-slate-100 bg-opacity-30 shadow-md backdrop-filter backdrop-blur-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-slate-100 bg-opacity-100 shadow-xl backdrop-filter backdrop-blur-lg">
       <div className="flex items-center justify-between m-2 p-4">
-        <h2 className="text-4xl font-bold font-serif text_gradient">
+        <h2 className="text-4xl animate-bounce font-bold font-serif text_gradient">
           Portfolio
         </h2>
         {/* Hamburger menu icon */}
         <button
-          className="block sm:hidden text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800"
+          className="block sm:hidden text-black hover:text-green-500 focus:outline-white focus:text-black"
           onClick={toggleMenu}
         >
-          <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <svg className="h-7 w-7 fill-current" viewBox="0 0 24 24">
             {/* Hamburger icon */}
             <path
               className={`${isOpen ? "hidden" : "block"}`}
@@ -46,7 +46,7 @@ const Nav = () => {
           <li>
             <Link
               href="/"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Home
             </Link>
@@ -54,7 +54,7 @@ const Nav = () => {
           <li>
             <Link
               href="/Exp"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Experience
             </Link>
@@ -62,7 +62,7 @@ const Nav = () => {
           <li>
             <Link
               href="/Skillset"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Skillset
             </Link>
@@ -70,7 +70,7 @@ const Nav = () => {
           <li>
             <Link
               href="/Projects"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Projects
             </Link>
@@ -79,7 +79,7 @@ const Nav = () => {
             <Link
               href="https://k-blogs.vercel.app/"
               target="_blank"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Blog
             </Link>
@@ -87,7 +87,7 @@ const Nav = () => {
           <li>
             <Link
               href="/Exp"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Resume
             </Link>
@@ -95,7 +95,7 @@ const Nav = () => {
           <li>
             <Link
               href="/Contact"
-              className="hover:text-slate-200 transition-colors duration-300"
+              className="hover:text-blue-600 transition-colors duration-300"
             >
               Contact
             </Link>

@@ -71,12 +71,12 @@ export default function Page() {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-opacity-8 min-h-screen mb-5 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-center text-4xl font-serif font-bold mt-20 mb-8">
+        <h1 className="text-center text-4xl text-slate-200 font-serif font-bold mt-20 mb-8">
           Experience
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
           {works.map((work, index) => (
             <motion.div
               key={index}
@@ -92,7 +92,7 @@ export default function Page() {
                 alt={work.title}
                 className="mx-auto mb-4 rounded-full"
               />
-              <h1 className="text-2xl font-serif font-bold text-center mb-2">
+              <h1 className="text-2xl animate-bounce font-serif font-bold text-center mb-2">
                 {work.title}
               </h1>
               <h2 className="text-lg font-medium text-center mb-2">

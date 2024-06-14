@@ -4,7 +4,7 @@
 
 /* styles.css */
 .text_gradient {
-  background: linear-gradient(to right, rgb(224, 2, 220), rgb(255, 0, 123));
+  background: linear-gradient(to right, rgb(245, 3, 213), rgba(255, 0, 76, 0.97));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
 }

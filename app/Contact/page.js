@@ -40,6 +40,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const endpoint = process.env.NEXT_PUBLIC_ENDPOINT; // Replace with your Hygraph CMS endpoint
 
     const mutation = `
@@ -93,7 +94,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen py-12 px-4  sm:px-6 lg:px-8">
+    <div className="bg-opacity-8 text-slate-100 min-h-screen py-12 px-4  sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-center text-4xl mt-20 font-bold mb-8">
           Let's Talk 👨‍💻
@@ -141,7 +142,7 @@ const Contact = () => {
           </form>
           {successMessage && <SuccessOverlay />}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3  text-gray-900 gap-8 mb-8">
           <div className="flex flex-row justify-center items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
             <FontAwesomeIcon
               icon={faMapMarkerAlt}
@@ -173,11 +174,13 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-center mt-5 text-2xl font-serif">Links</h1>
-        <div className="flex md:flex-row space-y-4 md:space-y-1 justify-center items-center flex-col space-x-0 md:space-x-4 mt-5 mb-4">
+        <h1 className="text-center mt-5 text-2xl animate-bounce z-10 font-semibold font-serif">
+          Socials
+        </h1>
+        <div className="flex md:flex-row space-y-4 md:space-y-1  justify-center items-center flex-col space-x-0 md:space-x-8 mt-5 mb-4">
           <FaInstagram
             color="red"
-            className="cursor-pointer transform hover:scale-110 transition duration-300"
+            className="cursor-pointer bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
             size={48}
             onClick={() => {
               window.open(
@@ -188,7 +191,7 @@ const Contact = () => {
           />
           <FaGithub
             size={48}
-            className="cursor-pointer transform hover:scale-110 transition duration-300"
+            className="cursor-pointer bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open("https://github.com/KshitizSharma11", "_blank");
             }}
@@ -196,7 +199,7 @@ const Contact = () => {
           <FaFacebook
             color="blue"
             size={48}
-            className="cursor-pointer transform hover:scale-110 transition duration-300"
+            className="cursor-pointer bg-gray-100 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open(
                 "https://www.facebook.com/kshitiz.sharma.3979",
@@ -205,9 +208,9 @@ const Contact = () => {
             }}
           />
           <FaTwitter
-            color="black"
+            color="blue"
             size={48}
-            className="cursor-pointer transform hover:scale-110 transition duration-300"
+            className="cursor-pointer bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open("https://x.com/kshitiz_the_one", "_blank");
             }}
@@ -215,7 +218,7 @@ const Contact = () => {
           <FaLinkedin
             color="blue"
             size={48}
-            className="cursor-pointer transform hover:scale-110 transition duration-300"
+            className="cursor-pointer bg-gray-100 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open(
                 "https://www.linkedin.com/in/kshitiz-sharma-the-one/",
