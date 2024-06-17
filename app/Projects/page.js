@@ -66,7 +66,7 @@ const Page = () => {
   }
 
   return (
-    <div className="bg-opacity-8 min-h-screen py-10">
+    <div className="bg-opacity-8 min-h-screen py-10 mb-10">
       <div className="container mx-auto">
         <h1 className="text-center text-4xl text-gray-100 font-serif font-bold mt-20">
           My Work 💼
@@ -75,7 +75,7 @@ const Page = () => {
           {works.map((work, index) => (
             <div
               key={index}
-              className="relative rounded-xl overflow-hidden shadow-lg bg-white"
+              className="relative rounded-xl border-2 border-cyan-400 overflow-hidden shadow-lg bg-white"
             >
               <img
                 src={work.image.url}

@@ -103,7 +103,7 @@ const Contact = () => {
         <div className="mb-8">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center space-y-4"
+            className="flex flex-col text-black items-center space-y-4"
           >
             <ParticlesComponent />
             <input

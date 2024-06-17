@@ -3,6 +3,25 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import {
+  SiGit,
+  SiGraphq,
+  SiTailwindcss,
+  SiTypescript,
+  SiExpress,
+  SiNextdotjs,
+  SiReact,
+  SiPostman,
+  SiKubernetes,
+  SiNodedotjs,
+  SiMongodb,
+  SiPostgresql,
+  SiJavascript,
+  SiSelenium,
+  SiDocker,
+} from "react-icons/si";
+import { FaReact, FaPhp, FaJava } from "react-icons/fa";
+import { BsBootstrap } from "react-icons/bs";
 const Hero = () => {
   const [message, setMessage] = useState(" Full-Stack");
   const arr = [" Cross-Platform", "n Android", " Full-Stack"];
@@ -26,7 +45,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="flex-col flex md:flex-row m-8 mt-40 md:mt-20 justify-around items-center "
       >
-        <div className="flex-col space-y-4 max-w-lg mx-auto text-center md:text-left">
+        <div className="flex-col space-y-4 max-w-lg mx-auto bg-black bg-opacity-40 p-5 text-center md:text-left">
           <h1 className="text-4xl font-bold text-white  mb-4">
             Hello Mate 👋, <strong className="animate-bounce">Kshitiz </strong>
             Here!
@@ -38,7 +57,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-sans text-gray-300 font-semibold text-lg mx-4 md:mx-0"
+            className="font-sans text-gray-300 font-bold text-lg mx-4 md:mx-0"
           >
             Hi again, I am Kshitiz, a software developer firmly believing in
             'Stoicism'. I am really passionate when it comes to building stuff.
@@ -70,7 +89,7 @@ const Hero = () => {
         </div>
       </motion.div>
       <div className="font-semibold">
-        <h1 className="text-4xl text-slate-200 text-center p-2 m-5">
+        <h1 className="text-4xl  text-slate-200 text-center p-2 m-5">
           Education
         </h1>
         <div className="flex flex-col md:flex-row items-center z-10 mt-10 justify-around">
@@ -123,6 +142,113 @@ const Hero = () => {
             </h1>
           </div>
         </div>
+      </div>
+      <div
+        className="container mt-20  flex flex-col md:flex-row items-center justify-evenly "
+        id="_skills"
+      >
+        <motion.img
+          animate={{
+            rotateY: [0, 45, 90, 45, 0],
+            visibility: ["visible", "hidden"], // Rotation on the z-axis
+          }}
+          transition={{
+            repeat: Infinity, // Infinite looping
+            duration: 5, // Duration of one loop
+            ease: "linear", // Linear easing for a smooth spin
+          }}
+          src="/pic4.png"
+          className="z-10 w md:ml-20 bg-black p-4"
+          width={400}
+          height={400}
+        />
+        <div className="text-3xl font-bold text-gray-100 bg-black p-4 bg-opacity-10 m-4">
+          <h1>My Skills</h1>
+
+          <div className="flex flex-row mt-5 items-center gap-5">
+            <div className="flex flex-col items-start justify-center space-y-5 mt-5">
+              <span className="relative flex flex-row  space-x-4 items-start">
+                <SiJavascript size={34} />
+                <h1 className="text-xl text-slate-100">Javascript </h1>
+              </span>
+              <span className="relative  flex flex-row space-x-4 items-center">
+                <SiReact size={34} />
+                <h1 className="text-xl text-slate-100">React </h1>
+              </span>
+
+              <span className="relative flex flex-row space-x-4 items-center">
+                <SiTailwindcss size={34} />
+                <h1 className="text-xl text-slate-100">Tailwind </h1>
+              </span>
+              <span className="relative flex flex-row space-x-4 items-center">
+                <SiNextdotjs size={34} />
+                <h1 className="text-xl text-slate-100">Next.js </h1>
+              </span>
+              <span className="relative flex flex-row space-x-4 items-center">
+                <SiNodedotjs size={34} />
+                <h1 className="text-xl text-slate-100">Node.js </h1>
+              </span>
+              <span className="relative flex flex-row space-x-4 items-center">
+                <SiKubernetes size={34} />
+                <h1 className="text-xl text-slate-100">Kubernetes </h1>
+              </span>
+              <span className="relative flex flex-row space-x-4 items-center">
+                <SiPostman size={34} />
+                <h1 className="text-xl text-slate-100">Postman</h1>
+              </span>
+              <span className="relative flex flex-row space-x-4 items-center">
+                <SiGit size={34} />
+                <h1 className="text-xl text-slate-100">Git</h1>
+              </span>
+            </div>
+            <div>
+              <div className="flex flex-col items-start justify-center space-y-5 mt-5">
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <SiTypescript size={34} />
+                  <h1 className="text-xl text-slate-100">Typescript</h1>
+                </span>
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <SiMongodb size={34} />
+                  <h1 className="text-xl text-slate-100">Mongo</h1>
+                </span>
+
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <SiPostgresql size={34} />
+                  <h1 className="text-xl text-slate-100">PostgreSQL </h1>
+                </span>
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <FaReact size={34} />
+                  <h1 className="text-xl text-slate-100">React - Native</h1>
+                </span>
+
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <SiDocker size={34} />
+                  <h1 className="text-xl text-slate-100">Docker</h1>
+                </span>
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <FaJava size={34} />
+                  <h1 className="text-xl text-slate-100">Java</h1>
+                </span>
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <SiSelenium size={34} />
+                  <h1 className="text-xl text-slate-100">Selenium</h1>
+                </span>
+                <span className="relative flex flex-row space-x-4 items-center">
+                  <SiExpress size={34} />
+                  <h1 className="text-xl text-slate-100">Express.js</h1>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 m-4 flex flex-row items-center rounded-3xl bg-opacity-10 bg-cyan-500 justify-center">
+        <h1 className="text-xl text-center font-semibold text-gray-100">
+          Additionally, I have experience in working in various linux
+          distributions such as Ubuntu, Mint and Parrot OS.
+          <br /> Plus I am well versed with tools like Firebase and Hypgraph
+          CMS.
+        </h1>
       </div>
     </div>
   );

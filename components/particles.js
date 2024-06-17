@@ -64,7 +64,7 @@ const ParticlesComponent = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 20,
         },
         opacity: {
           value: 1,
@@ -73,7 +73,7 @@ const ParticlesComponent = () => {
           type: ["star", "circle", "square"],
         },
         size: {
-          value: { min: 3, max: 7 },
+          value: { min: 10, max: 12 },
         },
       },
       detectRetina: true,
