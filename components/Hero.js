@@ -102,7 +102,7 @@ const Hero = () => {
               B.E CSE (Computer Science And Engineering)
             </h1>
             <h1 className="text-xl text-slate-200 text-center ">2020 - 2024</h1>
-            <h1 className="text-2xl text-slate-200 text-center ">CGPA 8.55</h1>
+            <h1 className="text-2xl text-slate-200 text-center ">CGPA 8.60</h1>
             <h1 className="text-2xl text-slate-200 text-center">
               Chandigarh University
             </h1>
@@ -120,7 +120,7 @@ const Hero = () => {
             </h1>
           </div>
           <img
-            src="https://scontent.fdel11-3.fna.fbcdn.net/v/t39.30808-6/365215197_724759956122494_5165759870445917462_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oZ3JaVDKE_4Q7kNvgErJqCa&_nc_ht=scontent.fdel11-3.fna&oh=00_AYAYRMyl7YTPaNOGuOlxo9sUjmRSzIVlNcL1RoljM2vdmg&oe=66709806"
+            src="/mcsp.jpg"
             className="w-80 h-80 rounded-full border-2 animate-bounce border-green-400 p-1 hover:border-cyan-400"
           />
         </div>
