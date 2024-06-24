@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const fetchWorks = async () => {
   try {
-    const res = await fetch(process.env.NEXT_PUBLIC_CDN, {
+    const res = await fetch("https://ap-south-1.cdn.hygraph.com/content/clx8jrel605aj07uz53e2t5sj/master", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
