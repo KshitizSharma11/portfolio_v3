@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ParticlesComponent from "../../components/particles";
+import LottieAnimation from "@/components/LottieAnimation";
 import {
   FaInstagram,
   FaGithub,
@@ -99,7 +100,9 @@ const Contact = () => {
         <h1 className="text-center text-4xl mt-20 font-bold mb-8">
           Let's Talk 👨‍💻
         </h1>
-
+        <div className="flex flex-row items-center justify-center m-5">
+          <LottieAnimation width={200} height={200} />
+        </div>
         <div className="mb-8">
           <form
             onSubmit={handleSubmit}
@@ -174,14 +177,14 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-center mt-5 text-2xl animate-bounce z-10 font-semibold font-serif">
+        <h1 className="text-center mt-20 text-2xl animate-bounce z-10 font-semibold font-serif">
           Socials
         </h1>
-        <div className="flex md:flex-row space-y-4 md:space-y-1  justify-center items-center flex-col space-x-0 md:space-x-8 mt-5 mb-4">
+        <div className="flex md:flex-row  space-y-4 md:space-y-1  justify-center items-center flex-col space-x-0 md:space-x-8 mt-10 mb-10">
           <FaInstagram
             color="red"
-            className="cursor-pointer bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
-            size={48}
+            className="cursor-pointer rounded-full p-2 bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
+            size={68}
             onClick={() => {
               window.open(
                 "https://www.instagram.com/kshitiz_sharma_k.s/",
@@ -190,16 +193,16 @@ const Contact = () => {
             }}
           />
           <FaGithub
-            size={48}
-            className="cursor-pointer bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
+            size={68}
+            className="cursor-pointer rounded-full p-2 bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open("https://github.com/KshitizSharma11", "_blank");
             }}
           />
           <FaFacebook
             color="blue"
-            size={48}
-            className="cursor-pointer bg-gray-100 animate-pulse transform hover:scale-110 transition duration-300"
+            size={68}
+            className="cursor-pointer rounded-full p-2 bg-gray-100 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open(
                 "https://www.facebook.com/kshitiz.sharma.3979",
@@ -209,16 +212,16 @@ const Contact = () => {
           />
           <FaTwitter
             color="blue"
-            size={48}
-            className="cursor-pointer bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
+            size={68}
+            className="cursor-pointer rounded-full p-2 bg-gray-800 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open("https://x.com/kshitiz_the_one", "_blank");
             }}
           />
           <FaLinkedin
             color="blue"
-            size={48}
-            className="cursor-pointer bg-gray-100 animate-pulse transform hover:scale-110 transition duration-300"
+            size={68}
+            className="cursor-pointer rounded-full p-2 bg-gray-100 animate-pulse transform hover:scale-110 transition duration-300"
             onClick={() => {
               window.open(
                 "https://www.linkedin.com/in/kshitiz-sharma-the-one/",

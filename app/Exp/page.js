@@ -83,7 +83,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-4 rounded-xl shadow-lg bg-white"
+              className="p-4 rounded-xl shadow-lg border-4 border-green-500 bg-white"
             >
               <img
                 src={work.image.url}

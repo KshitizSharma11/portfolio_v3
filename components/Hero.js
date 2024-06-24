@@ -80,7 +80,7 @@ const Hero = () => {
               ease: "linear",
               times: [0, 0.33, 0.33, 0.66, 0.66, 1, 1], // Ensure equal time for each color
             }}
-            src="https://ik.imagekit.io/9ilyixtzk/profile/profile.png?updatedAt="
+            src="/pict 1.png"
             alt="Hero Image"
             width={400}
             height={300}

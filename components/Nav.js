@@ -78,12 +78,13 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link
-              href="/Exp"
+            <a
+              href="/kshitizs11.pdf"
+              target="_blank"
               className="hover:text-blue-600 transition-colors duration-300"
             >
               Resume
-            </Link>
+            </a>
           </li>
           <li>
             <Link
