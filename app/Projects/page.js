@@ -4,13 +4,15 @@ import { FaGithub, FaEye } from "react-icons/fa";
 import { motion } from "framer-motion";
 const fetchWorks = async () => {
   try {
-    const res = await fetch("https://ap-south-1.cdn.hygraph.com/content/clx8jrel605aj07uz53e2t5sj/master", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: `
+    const res = await fetch(
+      "https://ap-south-1.cdn.hygraph.com/content/clx8jrel605aj07uz53e2t5sj/master",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query: `
           query MyQuery {
             projectss {
               githubUrl
@@ -23,8 +25,9 @@ const fetchWorks = async () => {
               description
             }
         }  `,
-      }),
-    });
+        }),
+      }
+    );
 
     if (!res.ok) {
       const errorDetails = await res.text();
@@ -71,11 +74,11 @@ const Page = () => {
         <h1 className="text-center text-4xl text-gray-100 font-serif font-bold mt-20">
           My Work 💼
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-6 mt-20">
           {works.map((work, index) => (
             <div
               key={index}
-              className="relative rounded-xl border-2 border-cyan-400 overflow-hidden shadow-lg bg-white"
+              className="relative rounded-xl ml-auto mr-auto w-4/5 md:w-7/8 border-2 border-cyan-400 overflow-hidden shadow-lg bg-white"
             >
               <img
                 src={work.image.url}
