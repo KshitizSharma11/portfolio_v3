@@ -118,7 +118,7 @@ const Contact = () => {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="border-2 bg-white rounded-lg border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none p-2 w-96"
+              className="border-2 bg-white rounded-lg border-gray-300 focus:border-green-500  ring-2 ring-cyan-500 focus:ring-green-500 focus:outline-none w-2/3 p-2  md:w-1/3"
             />
             <input
               type="email"
@@ -127,7 +127,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="border-2 bg-white rounded-lg border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none p-2 w-96"
+              className="border-2 bg-white rounded-lg border-gray-300 focus:border-green-500 ring-2  ring-cyan-500 focus:ring-green-500 focus:outline-none w-2/3 p-2 md:w-1/3 "
             />
             <textarea
               name="message"
@@ -136,7 +136,7 @@ const Contact = () => {
               rows="5"
               value={formData.message}
               onChange={handleChange}
-              className="border-2 bg-white rounded-lg border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none p-2 w-96"
+              className="border-2 bg-white rounded-lg border-gray-300 focus:border-green-500 ring-2  ring-cyan-500 focus:ring-green-500 focus:outline-none p-2 w-2/3 md:w-1/3"
             />
             <button
               type="submit"
@@ -148,7 +148,7 @@ const Contact = () => {
           {successMessage && <SuccessOverlay />}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  text-gray-900 gap-8 mb-8">
-          <div className="flex flex-row justify-center items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
+          <div className="flex flex-row justify-center w-6/7 items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
             <FontAwesomeIcon
               icon={faMapMarkerAlt}
               className="text-green-500 text-4xl"
@@ -158,7 +158,7 @@ const Contact = () => {
               <p>Baijnath, Kangra Himachal Pradesh, India (176125)</p>
             </div>
           </div>
-          <div className="flex flex-row justify-center items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
+          <div className="flex flex-row justify-center w-6/7 items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
             <FontAwesomeIcon
               icon={faMobileAlt}
               className="text-blue-500 text-4xl"
@@ -168,7 +168,7 @@ const Contact = () => {
               <p>+919805147466</p>
             </div>
           </div>
-          <div className="flex flex-row justify-center items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
+          <div className="flex flex-row justify-center w-6/7 items-center space-x-4 bg-white shadow-lg rounded-lg p-6">
             <FontAwesomeIcon
               icon={faEnvelope}
               className="text-red-500 text-4xl"
@@ -179,7 +179,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-center mt-20 text-2xl animate-bounce z-10 font-semibold font-serif">
+        <h1 className="text-center mt-20 text-3xl animate-bounce z-10 font-semibold font-serif">
           Socials
         </h1>
         <div className="flex md:flex-row  space-y-4 md:space-y-1  justify-center items-center flex-col space-x-0 md:space-x-8 mt-10 mb-10">

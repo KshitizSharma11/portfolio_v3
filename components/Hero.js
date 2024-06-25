@@ -95,9 +95,9 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center z-10 mt-10 justify-around">
           <motion.img
             src="https://images.news18.com/ibnlive/uploads/2022/01/untitled-design-1-1-16437108264x3.jpg?impolicy=website&width=640&height=480"
-            className="w-80 h-80 rounded-full border-2 animate-bounce border-green-400 hover:border-cyan-400 p-1  "
+            className="w-80 h-80  rounded-full border-2 md:animate-bounce border-green-400 hover:border-cyan-400 p-1  "
           />
-          <div className="flex-col flex justify-center items-start mt-5 md:mt-0 w-26 space-y-2 p-6 border-2 bg-black bg-opacity-6 border-green-400">
+          <div className="flex-col w-4/5  flex justify-center items-start md:w-1/3 mt-5 md:mt-0  space-y-2 p-6 border-2 bg-black bg-opacity-6 border-green-400">
             <h1 className="text-2xl text-slate-200 text-center">
               B.E CSE (Computer Science And Engineering)
             </h1>
@@ -109,7 +109,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex flex-col-reverse z-10 md:flex-row items-center justify-around mt-5  ">
-          <div className="flex-col flex justify-center items-start mt-5 md:mt-0 p-6 border-2 w-26 bg-black bg-opacity-6 border-green-400 space-y-2">
+          <div className="flex-col flex justify-center items-start mt-5 md:mt-0 p-6 border-2 w-4/5  md:w-1/3 bg-black bg-opacity-6 border-green-400 space-y-2">
             <h1 className="text-2xl text-slate-200 text-center">12th (ISC)</h1>
             <h1 className="text-xl text-slate-200 text-center ">2018 - 2020</h1>
             <h1 className="text-2xl text-slate-200 text-center ">
@@ -121,15 +121,15 @@ const Hero = () => {
           </div>
           <img
             src="/mcsp.jpg"
-            className="w-80 h-80 rounded-full border-2 animate-bounce border-green-400 p-1 hover:border-cyan-400"
+            className="w-80 h-80 rounded-full border-2 md:animate-bounce border-green-400 p-1 hover:border-cyan-400"
           />
         </div>
         <div className="flex flex-col mt-5 md:flex-row z-10 items-center justify-around">
           <motion.img
             src="https://yt3.googleusercontent.com/ytc/AIdro_mjmeONu-cAJhJTGBohRgvM1oAAUnjppD6Wr9BREc03MQ=s900-c-k-c0x00ffffff-no-rj"
-            className="w-80 h-80 rounded-full border-2 animate-bounce  border-green-400 p-1 hover:border-cyan-400 "
+            className="w-80 h-80 rounded-full border-2 md:animate-bounce  border-green-400 p-1 hover:border-cyan-400 "
           />
-          <div className="flex-col flex justify-center items-start mt-5 md:mt-0 p-6 space-y-2 border-2 w-26 bg-black bg-opacity-6 border-green-400">
+          <div className="flex-col flex justify-center items-start mt-5 md:mt-0 p-6 w-4/5 md:w-1/3 space-y-2 border-2  bg-black bg-opacity-6 border-green-400">
             <h1 className="text-2xl text-slate-200 text-center">
               10th Matricuation (ICSE)
             </h1>
