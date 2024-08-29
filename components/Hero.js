@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="container mb-20">
+    <div className="mx-auto mb-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
