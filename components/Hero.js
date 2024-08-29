@@ -144,7 +144,7 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className="container mt-20  flex flex-col md:flex-row items-center justify-evenly "
+        className=" mt-20  flex flex-col md:flex-row items-center justify-evenly "
         id="_skills"
       >
         <motion.img
