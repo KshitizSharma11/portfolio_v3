@@ -45,7 +45,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="flex-col flex md:flex-row m-8 mt-40 md:mt-20 justify-around items-center "
       >
-        <div className="flex-col space-y-4 max-w-lg mx-auto bg-black bg-opacity-40 p-5 text-center md:text-left">
+        <div className="flex-col space-y-4 max-w-lg bg-black bg-opacity-40 p-5 text-center md:text-left">
           <h1 className="text-4xl font-bold text-white  mb-4">
             Hello Mate 👋, <strong className="animate-bounce">Kshitiz </strong>
             Here!
