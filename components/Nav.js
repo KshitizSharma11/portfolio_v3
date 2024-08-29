@@ -10,8 +10,8 @@ const Nav = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-auto z-50 bg-slate-900 bg-opacity-60 shadow-xl backdrop-filter backdrop-blur-lg">
-      <div className="flex items-center  m-2 p-4">
+    <nav className="container fixed top-0 left-0 w-full z-50 bg-slate-900 bg-opacity-60 shadow-xl backdrop-filter backdrop-blur-lg">
+      <div className="flex items-center justify-between m-2 p-4">
         <h2 className="text-4xl  animate-bounce font-bold font-serif text_gradient">
           Portfolio
         </h2>
